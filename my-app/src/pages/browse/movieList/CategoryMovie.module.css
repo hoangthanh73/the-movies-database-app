@@ -1,0 +1,23 @@
+.category {
+    padding-bottom: 50px;
+}
+
+.category-inner {
+    overflow: scroll hidden;
+}
+
+.category-inner::-webkit-scrollbar {
+    height: 0px;
+}
+
+.scrollbar::-webkit-scrollbar {
+    height: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background: #444;
+}

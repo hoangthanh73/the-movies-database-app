@@ -1,0 +1,9 @@
+.item {
+    flex: 1 0 auto;
+    transition: all .3s;
+    padding: 8px 0;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}

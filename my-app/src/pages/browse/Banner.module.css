@@ -1,0 +1,15 @@
+.content {
+    max-width: 100%;
+    width: 480px;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .4);
+    color: #fff;
+}
+
+.desc {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* number of lines to show */
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
