@@ -1,0 +1,8 @@
+/* styles ResultList Component */
+.item {
+    transition: .3s;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}

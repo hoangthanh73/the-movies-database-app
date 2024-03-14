@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import IconSearch from "../../ICON/IconSearch";
 
 const Navbar = () => {
+
+    // state để thay đổi background navbar khi scroll
     const [scrollValue, setScrollValue] = useState(0);
     const onScroll = () => setScrollValue(window.scrollY);
     useEffect(() => {
@@ -11,6 +13,8 @@ const Navbar = () => {
     }, [scrollValue]);
 
     return (
+        
+        // Nếu scroll lớn hơn 100px thì thay dổi background thành màu đen
         <div className={`${scrollValue > 100 ? 'bg-dark' : 'bg-transparent'} position-fixed w-100 top-0 z-3`}>
             <div className='container'>
                 <div className='d-flex justify-content-between align-items-center'>

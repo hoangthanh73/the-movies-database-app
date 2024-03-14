@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import MovieItem from './MovieItem';
-import Detail from '../movieDetail/MovieDetail';
+import MovieDetail from '../movieDetail/MovieDetail';
 import classes from './CategoryMovie.module.css';
 
 const CategoryMovie = ({ movies, title }) => {
+    // tạo state movieDetail
     const [movieDetail, setMovieDetail] = useState({});
-    // const [toggleDetail, setToggleDetail] = useState(false);
 
+    // hàm xử lý khi click vào từng bộ phim
     const handlerClick = (movie) => {
         setMovieDetail({});
 
@@ -19,6 +20,8 @@ const CategoryMovie = ({ movies, title }) => {
 
     return (
         <div className='pb-5'>
+
+            {/* kiểm tra nếu không phải original thì lấy backdrop_img còn originals thì lấy poster */}
             {title && <h3 className='h3 text-white'>{title}</h3>}
             <div className={`${classes['category-inner']} ${title ? classes.scrollbar : ''}`}>
                 <ul className='d-flex gap-2 flex-nowrap ps-0'>
@@ -32,7 +35,9 @@ const CategoryMovie = ({ movies, title }) => {
                     )}
                 </ul>
             </div>
-            {movieDetail.id && <Detail movieDetail={movieDetail} />}
+
+            {/* nếu có movieDetail thì hiện thị MovieDetail Component */}
+            {movieDetail.id && <MovieDetail movieDetail={movieDetail} />}
         </div>
     )
 };

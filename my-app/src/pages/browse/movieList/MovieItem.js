@@ -1,12 +1,13 @@
 import classes from './MovieItem.module.css';
+import { img_path } from '../../../LinkRequest';
+import img from '../../../images/movies-hollywood-movies-wallpaper-02415240ad966efb1a18f205f0a89912.jpg';
 
 const MovieItem = (props) => {
-    const img_path = 'https://image.tmdb.org/t/p/original/';
     return (
         <li className={classes.item}
             style={props.width}
-            onClick={() => {props.onClick(props.movieData)}}>
-            <img src={`${img_path}${props.src}`} className='w-100 h-100' />
+            onClick={() => { props.onClick(props.movieData) }}>
+            <img src={props.src ? `${img_path}${props.src}` : img} className='w-100 h-100' />
         </li>
     )
 };
